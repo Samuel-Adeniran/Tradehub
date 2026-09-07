@@ -241,7 +241,58 @@ const result=document.getElementById('socialResult');
 if(!name||!price||!desc){result.textContent='Please complete the service name, price and description.';return;}
 result.textContent='Listing created as a demo: '+name+' — ₦'+Number(price).toLocaleString('en-NG')+'.';
 }
-function createListing(){
+async function createSocialListing(){
+const SUPABASE_URL='https://dnzobmwkahpcxkbmwqms.supabase.co';
+const SUPABASE_KEY='sb_publishable_O8G-bCxaQw0k7nr1HtuQhg_6VMde1bO';
+
+const name=document.getElementById('socialName').value.trim();
+const platform=document.getElementById('socialPlatform').value;
+const serviceType=document.getElementById('socialType').value;
+const price=document.getElementById('socialPrice').value;
+const desc=document.getElementById('socialDescription').value.trim();
+const result=document.getElementById('socialResult');
+
+if(!name||!price||!desc){
+result.textContent='Please complete the service name, price and description.';
+return;
+}
+
+result.textContent='Saving listing...';
+
+try{
+const response=await fetch(SUPABASE_URL+'/rest/v1/social_media_listings',{
+method:'POST',
+headers:{
+'Content-Type':'application/json',
+'apikey':SUPABASE_KEY,
+'Authorization':'Bearer '+SUPABASE_KEY,
+'Prefer':'return=minimal'
+},
+body:JSON.stringify({
+service_name:name,
+platform:platform,
+service_type:serviceType,
+price:Number(price),
+description:desc
+})
+});
+
+if(!response.ok){
+const errorText=await response.text();
+throw new Error(errorText);
+}
+
+result.textContent='Listing saved successfully: '+name+' — ₦'+Number(price).toLocaleString('en-NG');
+
+document.getElementById('socialName').value='';
+document.getElementById('socialPrice').value='';
+document.getElementById('socialDescription').value='';
+
+}catch(error){
+console.error(error);
+result.textContent='Could not save listing. Please check the Supabase connection.';
+}
+}
 const name=document.getElementById('listingName').value.trim();
 const price=document.getElementById('listingPrice').value;
 const result=document.getElementById('listingResult');
