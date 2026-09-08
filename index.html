@@ -233,18 +233,9 @@ nav{display:none}
 function order(item){
 alert(item + ' selected. Real checkout will be connected to the marketplace backend in the next stage.');
 }
-function createSocialListing(){
-const name=document.getElementById('socialName').value.trim();
-const price=document.getElementById('socialPrice').value;
-const desc=document.getElementById('socialDescription').value.trim();
-const result=document.getElementById('socialResult');
-if(!name||!price||!desc){result.textContent='Please complete the service name, price and description.';return;}
-result.textContent='Listing created as a demo: '+name+' — ₦'+Number(price).toLocaleString('en-NG')+'.';
-}
 async function createSocialListing(){
 const SUPABASE_URL='https://dnzobmwkahpcxkbmwqms.supabase.co';
 const SUPABASE_KEY='sb_publishable_O8G-bCxaQw0k7nr1HtuQhg_6VMde1bO';
-
 const name=document.getElementById('socialName').value.trim();
 const platform=document.getElementById('socialPlatform').value;
 const serviceType=document.getElementById('socialType').value;
@@ -278,21 +269,16 @@ description:desc
 });
 
 if(!response.ok){
-const errorText=await response.text();
-throw new Error(errorText);
+throw new Error(await response.text());
 }
 
-result.textContent='Listing saved successfully: '+name+' — ₦'+Number(price).toLocaleString('en-NG');
-
-document.getElementById('socialName').value='';
-document.getElementById('socialPrice').value='';
-document.getElementById('socialDescription').value='';
-
+result.textContent='Listing saved successfully!';
 }catch(error){
 console.error(error);
 result.textContent='Could not save listing. Please check the Supabase connection.';
 }
 }
+function createListing(){
 const name=document.getElementById('listingName').value.trim();
 const price=document.getElementById('listingPrice').value;
 const result=document.getElementById('listingResult');
@@ -314,4 +300,4 @@ result.textContent='Vendor application saved as a demo. Backend verification wil
 </script>
 
 </body>
-                                                                                      </html>
+  </html>
