@@ -3,196 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TradeHub — Nigeria's Digital Marketplace</title>
+<title>TradeHub Nigeria</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033;line-height:1.5}
-a{text-decoration:none;color:inherit}
-header{background:#fff;border-bottom:1px solid #e8ebf2;position:sticky;top:0;z-index:10}
-.nav{max-width:1100px;margin:auto;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.logo{font-size:24px;font-weight:800}
-.logo span{color:#2563eb}
-nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
-nav a:hover{color:#2563eb}
-.container{max-width:1100px;margin:auto;padding:28px 18px}
-.hero{background:linear-gradient(135deg,#111827,#2563eb);color:#fff;border-radius:22px;padding:45px 25px;margin-bottom:25px}
-.hero h1{font-size:clamp(30px,6vw,52px);margin-bottom:12px}
-.hero p{max-width:650px;color:#e5e7eb;margin-bottom:22px}
-.btn{display:inline-block;border:0;border-radius:10px;padding:12px 17px;font-weight:700;cursor:pointer;background:#2563eb;color:#fff}
-.btn.light{background:#fff;color:#111827}
-.btn.green{background:#16a34a}
-.btn.gray{background:#e5e7eb;color:#111827}
-section{margin:28px 0}
-h2{font-size:27px;margin-bottom:15px}
-h3{margin-bottom:7px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
-.card{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:20px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
-.card p{color:#667085;font-size:14px;margin-bottom:12px}
-.price{font-size:20px;font-weight:800;margin:8px 0 14px}
-.badge{display:inline-block;background:#eef4ff;color:#2563eb;padding:5px 9px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:9px}
-.form{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:20px}
-input,select,textarea{width:100%;padding:12px;margin:7px 0 13px;border:1px solid #d9deea;border-radius:9px;font-size:15px}
-textarea{min-height:100px;resize:vertical}
+header{background:#111827;color:#fff;padding:16px 20px;position:sticky;top:0;z-index:10}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:22px;font-weight:800}
+nav a{color:#fff;text-decoration:none;margin-left:12px;font-size:14px}
+.hero{background:linear-gradient(135deg,#111827,#374151);color:#fff;padding:70px 20px;text-align:center}
+.hero h1{font-size:40px;margin-bottom:12px}
+.hero p{max-width:650px;margin:0 auto 22px;color:#e5e7eb}
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+section{margin-bottom:50px}
+h2{font-size:28px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 5px 18px rgba(0,0,0,.07)}
+.card h3{margin:8px 0}
+.card p{color:#596273;font-size:14px;margin:6px 0}
+.price{font-size:22px;font-weight:800;margin:12px 0}
+.badge{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:20px;padding:5px 10px;font-size:12px;font-weight:700}
+.btn{display:inline-block;border:0;background:#111827;color:#fff;padding:11px 16px;border-radius:9px;cursor:pointer;text-decoration:none;margin-top:10px}
+.btn:hover{opacity:.9}
+.form{background:#fff;padding:22px;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.07)}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:9px;margin:7px 0 15px;font-size:15px}
+textarea{min-height:110px;resize:vertical}
 label{font-weight:700;font-size:14px}
-.notice{background:#eff6ff;border-left:4px solid #2563eb;padding:13px;border-radius:8px;margin-bottom:15px;font-size:14px}
-.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
-.balance{font-size:30px;font-weight:800;margin:8px 0}
-.actions{display:flex;gap:8px;flex-wrap:wrap}
-footer{background:#111827;color:#cbd5e1;padding:35px 18px;margin-top:45px}
-footer .container{padding-top:0;padding-bottom:0}
-.hidden{display:none}
-.small{font-size:13px;color:#667085}
-@media(max-width:650px){
-nav{display:none}
-.hero{padding:32px 20px}
-.container{padding:22px 14px}
-}
+.result{margin-top:12px;font-weight:700}
+footer{background:#111827;color:#fff;text-align:center;padding:30px 20px}
+.small{font-size:13px;color:#6b7280}
+@media(max-width:700px){.hero h1{font-size:30px}nav{flex-wrap:wrap}.navlinks{width:100%;display:flex;flex-wrap:wrap;gap:8px}.navlinks a{margin:0}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="nav">
-<a class="logo" href="#home">Trade<span>Hub</span></a>
 <nav>
-<a href="#home">Home</a>
-<a href="#marketplace">Marketplace</a>
-<a href="#dashboard">Dashboard</a>
-<a href="#login">Login</a>
-</nav>
+<div class="logo">TradeHub</div>
+<div class="navlinks">
+<a href="#gift-cards">Gift Cards</a>
+<a href="#social">Social Media</a>
+<a href="#digital">Digital Services</a>
+<a href="#gaming">Gaming</a>
+<a href="#numbers">Virtual Numbers</a>
+<a href="#vendor">Become a Vendor</a>
 </div>
+</nav>
 </header>
 
-<main id="home" class="container">
-
-<div class="hero">
+<section class="hero">
 <h1>Nigeria's Digital Marketplace</h1>
-<p>Buy and sell gift cards, social media services, digital services, gaming products and virtual numbers in one place.</p>
-<div class="actions">
-<a class="btn light" href="#marketplace">Explore Marketplace</a>
-<a class="btn" href="#sell-social">Start Selling</a>
-</div>
-</div>
-
-<section id="marketplace">
-<h2>Explore TradeHub</h2>
-<div class="grid">
-<div class="card"><span class="badge">Gift Cards</span><h3>Buy & Sell Gift Cards</h3><p>Find gift cards from verified marketplace vendors.</p><a class="btn" href="#giftcards">View Gift Cards</a></div>
-<div class="card"><span class="badge">Social Media</span><h3>Sell Social Media</h3><p>Offer legitimate social media management, content and promotion services.</p><a class="btn" href="#social">Explore Social Media</a></div>
-<div class="card"><span class="badge">Digital Services</span><h3>Digital Services</h3><p>Design, writing, video editing, websites and more.</p><a class="btn" href="#services">View Services</a></div>
-<div class="card"><span class="badge">Gaming</span><h3>Gaming</h3><p>Gaming credits, top-ups and permitted digital services.</p><a class="btn" href="#gaming">View Gaming</a></div>
-<div class="card"><span class="badge">Virtual Numbers</span><h3>Virtual Numbers</h3><p>Browse legitimate communications-number services.</p><a class="btn" href="#numbers">View Numbers</a></div>
-<div class="card"><span class="badge">Vendors</span><h3>Become a Vendor</h3><p>Create your vendor profile and list your services.</p><a class="btn" href="#vendor">Become a Vendor</a></div>
-</div>
+<p>Buy and sell gift cards, social media services, digital services, gaming products and virtual numbers.</p>
+<a class="btn" href="#social">Explore Marketplace</a>
 </section>
 
-<section id="giftcards">
+<main class="container">
+
+<section id="gift-cards">
 <h2>Gift Cards</h2>
 <div class="grid">
-<div class="card"><h3>Apple Gift Card</h3><p>Verified digital gift card listings.</p><div class="price">From ₦10,000</div><button class="btn" onclick="order('Apple Gift Card')">Buy Now</button></div>
-<div class="card"><h3>Google Play</h3><p>Digital Google Play gift card listings.</p><div class="price">From ₦5,000</div><button class="btn" onclick="order('Google Play Gift Card')">Buy Now</button></div>
-<div class="card"><h3>Steam</h3><p>Gaming gift card listings.</p><div class="price">From ₦10,000</div><button class="btn" onclick="order('Steam Gift Card')">Buy Now</button></div>
-<div class="card"><h3>PlayStation</h3><p>PlayStation gift card listings.</p><div class="price">From ₦10,000</div><button class="btn" onclick="order('PlayStation Gift Card')">Buy Now</button></div>
+<div class="card"><span class="badge">Gift Card</span><h3>Apple Gift Card</h3><p>Buy and sell Apple gift cards.</p><div class="price">₦10,000+</div><button class="btn" onclick="order('Apple Gift Card')">View</button></div>
+<div class="card"><span class="badge">Gift Card</span><h3>Amazon Gift Card</h3><p>Trade Amazon gift cards securely.</p><div class="price">₦10,000+</div><button class="btn" onclick="order('Amazon Gift Card')">View</button></div>
+<div class="card"><span class="badge">Gift Card</span><h3>Google Play Gift Card</h3><p>Buy and sell Google Play cards.</p><div class="price">₦10,000+</div><button class="btn" onclick="order('Google Play Gift Card')">View</button></div>
 </div>
 </section>
 
 <section id="social">
 <h2>Social Media Marketplace</h2>
-<div class="notice">TradeHub is for legitimate services only. Do not list hacked, stolen, compromised or unauthorized social media accounts.</div>
 <div class="grid">
-<div class="card"><span class="badge">Instagram</span><h3>Instagram Management</h3><p>Content planning, page management and engagement support.</p><div class="price">From ₦10,000</div><a class="btn" href="#sell-social">Sell This Service</a></div>
-<div class="card"><span class="badge">TikTok</span><h3>TikTok Content</h3><p>Content creation, editing and social media support.</p><div class="price">From ₦5,000</div><a class="btn" href="#sell-social">Sell This Service</a></div>
-<div class="card"><span class="badge">Facebook</span><h3>Facebook Page Services</h3><p>Page setup, management and content support.</p><div class="price">From ₦7,000</div><a class="btn" href="#sell-social">Sell This Service</a></div>
-<div class="card"><span class="badge">Promotion</span><h3>Social Media Promotion</h3><p>Legitimate promotional and content distribution services.</p><div class="price">From ₦3,000</div><a class="btn" href="#sell-social">Sell This Service</a></div>
+<div class="card"><span class="badge">Instagram</span><h3>Instagram Growth</h3><p>Grow your Instagram presence with quality support.</p><div class="price">₦5,000+</div><button class="btn" onclick="order('Instagram Growth')">View Service</button></div>
+<div class="card"><span class="badge">TikTok</span><h3>TikTok Growth</h3><p>Social media growth and content support.</p><div class="price">₦5,000+</div><button class="btn" onclick="order('TikTok Growth')">View Service</button></div>
+<div class="card"><span class="badge">Facebook</span><h3>Facebook Page Support</h3><p>Management and content support for pages.</p><div class="price">₦5,000+</div><button class="btn" onclick="order('Facebook Page Support')">View Service</button></div>
+</div>
+</section>
+
+<section id="live-social-listings">
+<h2>Live Social Media Listings</h2>
+<div id="socialListings" class="grid">
+<div class="card"><p>Loading listings...</p></div>
 </div>
 </section>
 
 <section id="sell-social">
 <h2>Sell Social Media Services</h2>
 <div class="form">
-<div class="notice">Create a listing for a service you personally provide. Your listing can later be connected to vendor verification and order processing.</div>
-<label>Service Name</label>
+<label for="socialName">Service Name</label>
 <input id="socialName" placeholder="e.g. Instagram Page Management">
-<label>Platform</label>
+
+<label for="socialPlatform">Platform</label>
 <select id="socialPlatform">
-<option>Instagram</option><option>TikTok</option><option>Facebook</option><option>YouTube</option><option>Other</option>
+<option value="Instagram">Instagram</option>
+<option value="TikTok">TikTok</option>
+<option value="Facebook">Facebook</option>
+<option value="YouTube">YouTube</option>
+<option value="X">X</option>
+<option value="Other">Other</option>
 </select>
-<label>Service Type</label>
+
+<label for="socialType">Service Type</label>
 <select id="socialType">
-<option>Account Management</option><option>Content Creation</option><option>Video Editing</option><option>Promotion</option><option>Page Setup</option><option>Other Legitimate Service</option>
+<option value="Account Management">Account Management</option>
+<option value="Followers">Followers</option>
+<option value="Likes">Likes</option>
+<option value="Views">Views</option>
+<option value="Content Creation">Content Creation</option>
+<option value="Page Promotion">Page Promotion</option>
+<option value="Other">Other</option>
 </select>
-<label>Price (₦)</label>
-<input id="socialPrice" type="number" min="0" placeholder="e.g. 10000">
-<label>Service Description</label>
-<textarea id="socialDescription" placeholder="Describe what the buyer will receive..."></textarea>
-<button class="btn green" onclick="createSocialListing()">Create Social Media Listing</button>
-<p id="socialResult" class="small" style="margin-top:12px"></p>
+
+<label for="socialPrice">Price (₦)</label>
+<input id="socialPrice" type="number" min="0" placeholder="10000">
+
+<label for="socialDescription">Description</label>
+<textarea id="socialDescription" placeholder="Describe your service"></textarea>
+
+<button class="btn" onclick="createSocialListing()">Sell Service</button>
+<div id="socialResult" class="result"></div>
 </div>
 </section>
 
-<section id="services">
+<section id="digital">
 <h2>Digital Services</h2>
 <div class="grid">
-<div class="card"><h3>Graphic Design</h3><p>Logos, flyers, posters and social graphics.</p><div class="price">From ₦5,000</div><button class="btn" onclick="order('Graphic Design')">Order</button></div>
-<div class="card"><h3>Video Editing</h3><p>Short videos, adverts and social content.</p><div class="price">From ₦7,000</div><button class="btn" onclick="order('Video Editing')">Order</button></div>
-<div class="card"><h3>Website Development</h3><p>Business websites and landing pages.</p><div class="price">From ₦30,000</div><button class="btn" onclick="order('Website Development')">Order</button></div>
-<div class="card"><h3>Writing & Typing</h3><p>Typing, documents and other digital writing services.</p><div class="price">From ₦3,000</div><button class="btn" onclick="order('Writing & Typing')">Order</button></div>
+<div class="card"><h3>Graphic Design</h3><p>Logos, flyers and social media designs.</p><div class="price">₦5,000+</div></div>
+<div class="card"><h3>Video Editing</h3><p>Professional short-form and long-form editing.</p><div class="price">₦7,000+</div></div>
+<div class="card"><h3>Website Design</h3><p>Simple websites for businesses and creators.</p><div class="price">₦20,000+</div></div>
 </div>
 </section>
 
 <section id="gaming">
 <h2>Gaming</h2>
 <div class="grid">
-<div class="card"><h3>Game Top-Up</h3><p>Digital game credit/top-up services from vendors.</p><div class="price">From ₦2,000</div><button class="btn" onclick="order('Game Top-Up')">View</button></div>
-<div class="card"><h3>Gaming Services</h3><p>Permitted digital gaming-related services.</p><div class="price">From ₦3,000</div><button class="btn" onclick="order('Gaming Services')">View</button></div>
+<div class="card"><h3>Gaming Accounts</h3><p>Browse gaming-related digital services.</p></div>
+<div class="card"><h3>Game Credits</h3><p>Trade selected gaming credits and services.</p></div>
+<div class="card"><h3>Gaming Services</h3><p>Find gaming support from vendors.</p></div>
 </div>
 </section>
 
 <section id="numbers">
 <h2>Virtual Numbers</h2>
-<div class="form">
-<label>Country</label>
-<select id="numberCountry"><option>Nigeria</option><option>United States</option><option>United Kingdom</option><option>Canada</option></select>
-<label>Service</label>
-<select id="numberService"><option>SMS-capable number</option><option>Business communications number</option><option>Other legitimate use</option></select>
-<button class="btn" onclick="checkNumber()">Check Availability</button>
-<p id="numberResult" class="small" style="margin-top:12px"></p>
+<div class="grid">
+<div class="card"><h3>Virtual Phone Numbers</h3><p>Browse available virtual number services.</p><div class="price">₦2,000+</div></div>
+<div class="card"><h3>Verification Services</h3><p>Digital verification-related services from vendors.</p></div>
 </div>
 </section>
 
 <section id="vendor">
 <h2>Become a Vendor</h2>
 <div class="form">
-<label>Full Name</label><input id="vendorName" placeholder="Your name">
-<label>Email</label><input id="vendorEmail" type="email" placeholder="you@example.com">
-<label>Business Name</label><input id="vendorBusiness" placeholder="Business name">
-<label>Category</label>
-<select id="vendorCategory"><option>Gift Cards</option><option>Social Media</option><option>Digital Services</option><option>Gaming</option><option>Virtual Numbers</option></select>
-<label>Business Description</label><textarea id="vendorDescription" placeholder="Tell buyers about your services..."></textarea>
-<button class="btn" onclick="applyVendor()">Submit Vendor Application</button>
-<p id="vendorResult" class="small" style="margin-top:12px"></p>
+<label>Name</label><input placeholder="Your name">
+<label>Email</label><input type="email" placeholder="you@example.com">
+<label>What do you sell?</label><textarea placeholder="Tell us about your products or services"></textarea>
+<button class="btn" onclick="alert('Vendor application submitted as a demo.')">Apply</button>
 </div>
 </section>
 
 <section id="dashboard">
 <h2>Dashboard</h2>
-<div class="dashboard">
-<div class="card"><p>Wallet Balance</p><div class="balance">₦0.00</div><div class="actions"><button class="btn" onclick="alert('Wallet deposits will be connected to a payment provider in the next stage.')">Deposit</button><button class="btn gray" onclick="alert('Withdrawal will be enabled after wallet and vendor verification are connected.')">Withdraw</button></div></div>
-<div class="card"><h3>Buy Gift Cards</h3><p>Browse available gift cards.</p><a class="btn" href="#giftcards">Open</a></div>
-<div class="card"><h3>Sell Gift Cards</h3><p>Create a gift card listing.</p><a class="btn" href="#sell">Open</a></div>
-<div class="card"><h3>Sell Social Media</h3><p>Create a social media service listing.</p><a class="btn" href="#sell-social">Open</a></div>
-</div>
+<div class="card"><p>Vendor dashboard coming soon. Your listings will appear here.</p></div>
 </section>
 
-<section id="sell">
-<h2>Create a Marketplace Listing</h2>
+<section id="listing">
+<h2>Create a Listing</h2>
 <div class="form">
-<label>Product / Service Name</label><input id="listingName" placeholder="Name">
-<label>Category</label><select id="listingCategory"><option>Gift Cards</option><option>Digital Services</option><option>Gaming</option><option>Other</option></select>
+<label>Listing Name</label><input id="listingName" placeholder="Product or service">
 <label>Price (₦)</label><input id="listingPrice" type="number" placeholder="10000">
-<label>Description</label><textarea id="listingDescription" placeholder="Describe your listing..."></textarea>
-<button class="btn green" onclick="createListing()">Create Listing</button>
-<p id="listingResult" class="small" style="margin-top:12px"></p>
+<label>Description</label><textarea id="listingDesc" placeholder="Describe your listing"></textarea>
+<button class="btn" onclick="createGenericListing()">Create Listing</button>
+<div id="listingResult" class="result"></div>
 </div>
 </section>
 
@@ -201,7 +179,7 @@ nav{display:none}
 <div class="form">
 <label>Email</label><input type="email" placeholder="you@example.com">
 <label>Password</label><input type="password" placeholder="Password">
-<button class="btn" onclick="alert('Account login will be connected to the backend in the next stage.')">Login</button>
+<button class="btn" onclick="alert('Login will be connected soon.')">Login</button>
 </div>
 </section>
 
@@ -212,30 +190,68 @@ nav{display:none}
 
 <section id="support">
 <h2>Support</h2>
-<div class="form">
-<label>Email</label><input type="email" placeholder="you@example.com">
-<label>Message</label><textarea placeholder="How can we help?"></textarea>
-<button class="btn" onclick="alert('Support submission will be connected to the backend in the next stage.')">Send Message</button>
-</div>
+<div class="card"><p>Need help? Contact TradeHub support.</p></div>
 </section>
 
 </main>
 
 <footer>
-<div class="container">
-<h3>TradeHub</h3>
-<p>Nigeria's digital marketplace for legitimate digital products and services.</p>
-<p style="margin-top:12px">© 2026 TradeHub. All rights reserved.</p>
-</div>
+<p>© 2026 TradeHub Nigeria. All rights reserved.</p>
 </footer>
 
 <script>
-function order(item){
-alert(item + ' selected. Real checkout will be connected to the marketplace backend in the next stage.');
-}
-async function createSocialListing(){
 const SUPABASE_URL='https://dnzobmwkahpcxkbmwqms.supabase.co';
 const SUPABASE_KEY='sb_publishable_O8G-bCxaQw0k7nr1HtuQhg_6VMde1bO';
+
+function escapeHtml(value){
+return String(value).replace(/[&<>"']/g,function(char){
+return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char];
+});
+}
+
+async function loadSocialListings(){
+const container=document.getElementById('socialListings');
+if(!container)return;
+
+try{
+const response=await fetch(
+SUPABASE_URL+'/rest/v1/social_media_listings?select=*&order=created_at.desc',
+{
+headers:{
+'apikey':SUPABASE_KEY,
+'Authorization':'Bearer '+SUPABASE_KEY
+}
+}
+);
+
+if(!response.ok)throw new Error(await response.text());
+
+const listings=await response.json();
+
+if(!listings.length){
+container.innerHTML='<div class="card"><p>No social media listings yet.</p></div>';
+return;
+}
+
+container.innerHTML=listings.map(function(item){
+return `
+<div class="card">
+<span class="badge">${escapeHtml(item.platform)}</span>
+<h3>${escapeHtml(item.service_name)}</h3>
+<p>${escapeHtml(item.service_type)}</p>
+<div class="price">₦${Number(item.price).toLocaleString('en-NG')}</div>
+<p>${escapeHtml(item.description)}</p>
+<button class="btn" onclick="order('Social Media Service')">View Service</button>
+</div>`;
+}).join('');
+
+}catch(error){
+console.error(error);
+container.innerHTML='<div class="card"><p>Unable to load listings right now.</p></div>';
+}
+}
+
+async function createSocialListing(){
 const name=document.getElementById('socialName').value.trim();
 const platform=document.getElementById('socialPlatform').value;
 const serviceType=document.getElementById('socialType').value;
@@ -268,35 +284,37 @@ description:desc
 })
 });
 
-if(!response.ok){
-throw new Error(await response.text());
-}
+if(!response.ok)throw new Error(await response.text());
 
 result.textContent='Listing saved successfully!';
+document.getElementById('socialName').value='';
+document.getElementById('socialPrice').value='';
+document.getElementById('socialDescription').value='';
+await loadSocialListings();
+
 }catch(error){
 console.error(error);
 result.textContent='Could not save listing. Please check the Supabase connection.';
 }
 }
-function createListing(){
+
+function order(item){
+alert('You selected: '+item);
+}
+
+function createGenericListing(){
 const name=document.getElementById('listingName').value.trim();
 const price=document.getElementById('listingPrice').value;
+const desc=document.getElementById('listingDesc').value.trim();
 const result=document.getElementById('listingResult');
-if(!name||!price){result.textContent='Please enter a name and price.';return;}
-result.textContent='Listing created as a demo: '+name+' — ₦'+Number(price).toLocaleString('en-NG')+'.';
+if(!name||!price||!desc){
+result.textContent='Please complete all fields.';
+return;
 }
-function checkNumber(){
-const country=document.getElementById('numberCountry').value;
-document.getElementById('numberResult').textContent='Availability check for '+country+' is ready for connection to a legitimate provider/API.';
+result.textContent='Listing created as a demo.';
 }
-function applyVendor(){
-const name=document.getElementById('vendorName').value.trim();
-const email=document.getElementById('vendorEmail').value.trim();
-const business=document.getElementById('vendorBusiness').value.trim();
-const result=document.getElementById('vendorResult');
-if(!name||!email||!business){result.textContent='Please complete your name, email and business name.';return;}
-result.textContent='Vendor application saved as a demo. Backend verification will be connected later.';
-}
+
+loadSocialListings();
 </script>
 
 </body>
